@@ -368,6 +368,60 @@ h1 {
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}  .process {
+  padding: 120px 8%;
+  border-top: 1px solid #242321;
+}
+
+.process-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.process-label {
+  color: #d6b15e;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.process h2 {
+  max-width: 900px;
+  font-size: clamp(46px, 5vw, 78px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-bottom: 56px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}.process-step {
+  border-top: 1px solid #3a3935;
+  padding-top: 22px;
+}
+
+.process-step span {
+  color: #d6b15e;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.process-step h3 {
+  margin-top: 24px;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.process-step p {
+  margin-top: 14px;
+  color: #aaa69d;
+  font-size: 15px;
+  line-height: 1.6;
 }
     footer {
       display: flex;
@@ -549,7 +603,39 @@ h1 {
     </div>
   </div>
 </section>
+<section class="process">
+  <div class="process-inner">
+    <div class="process-label">HOW IT WORKS</div>
 
+    <h2>From Business Problem to Working AI System.</h2>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <span>01</span>
+        <h3>Diagnose</h3>
+        <p>We identify the bottlenecks, repetitive work and high-value automation opportunities.</p>
+      </div>
+
+      <div class="process-step">
+        <span>02</span>
+        <h3>Design</h3>
+        <p>We architect the AI workflows, integrations and control logic around your business.</p>
+      </div>
+
+      <div class="process-step">
+        <span>03</span>
+        <h3>Build</h3>
+        <p>We implement, connect and test the system inside your operating environment.</p>
+      </div>
+
+      <div class="process-step">
+        <span>04</span>
+        <h3>Optimize</h3>
+        <p>We refine performance, reliability and business outcomes as the system runs.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>
     <span>STRATIVON</span>
     <span>AI Business Systems Studio</span>
