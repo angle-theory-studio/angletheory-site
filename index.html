@@ -320,6 +320,54 @@ h1 {
 .solution-card.flagship {
   border-color: #d6b15e;
   grid-column: span 2;
+  
+}.flagship-section {
+  padding: 140px 8%;
+  border-top: 1px solid #242321;
+}
+
+.flagship-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flagship-label {
+  color: #d6b15e;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.flagship-section h2 {
+  max-width: 950px;
+  font-size: clamp(56px, 6vw, 96px);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.flagship-section p {
+  max-width: 720px;
+  margin-top: 32px;
+  color: #aaa69d;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.flagship-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 48px;
+}
+
+.flagship-flow span {
+  border: 1px solid #3a3935;
+  padding: 14px 18px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
     footer {
       display: flex;
@@ -479,7 +527,30 @@ h1 {
       </div>
     </div>
   </div>
-</section> <footer>
+</section>
+
+<section class="flagship-section">
+  <div class="flagship-inner">
+    <div class="flagship-label">FLAGSHIP SYSTEM</div>
+
+    <h2>Autonomous Business System</h2>
+
+    <p>
+      One controlled AI architecture coordinating sales, communication,
+      operations, data and decision logic across the business.
+    </p>
+
+    <div class="flagship-flow">
+      <span>Strategy</span>
+      <span>Intelligence</span>
+      <span>Execution</span>
+      <span>Connectivity</span>
+      <span>Control</span>
+    </div>
+  </div>
+</section>
+
+<footer>
     <span>STRATIVON</span>
     <span>AI Business Systems Studio</span>
   </footer>
