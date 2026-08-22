@@ -427,7 +427,65 @@ h1 {
   color: #aaa69d;
   font-size: 15px;
   line-height: 1.6;
-}.final-cta {
+}
+.audience {
+  padding: 120px 6%;
+  border-top: 1px solid #242321;
+}
+
+.audience-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.audience-label {
+  color: #d6b15e;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.audience h2 {
+  max-width: 950px;
+  font-size: clamp(48px, 5vw, 82px);
+  line-height: 1.03;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  margin-bottom: 56px;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.audience-card {
+  border: 1px solid #3a3935;
+  padding: 28px;
+  min-height: 220px;
+}
+
+.audience-card span {
+  color: #d6b15e;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.audience-card h3 {
+  margin-top: 28px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.audience-card p {
+  margin-top: 16px;
+  color: #aaa69d;
+  font-size: 17px;
+  line-height: 1.6;
+}    
+    .final-cta {
   padding: 140px 8%;
   border-top: 1px solid #242321;
 }
@@ -660,6 +718,40 @@ h1 {
     </div>
   </div>
 </section>
+<section class="audience">
+  <div class="audience-inner">
+    <div class="audience-label">WHO IT’S FOR</div>
+
+    <h2>Built for Businesses Ready to Operate Smarter.</h2>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <span>01</span>
+        <h3>Growing Sales Teams</h3>
+        <p>For businesses handling more leads than their current process can manage efficiently.</p>
+      </div>
+
+      <div class="audience-card">
+        <span>02</span>
+        <h3>High-Volume Communication</h3>
+        <p>For teams dealing with repeated inquiries, follow-ups and customer conversations across channels.</p>
+      </div>
+
+      <div class="audience-card">
+        <span>03</span>
+        <h3>Manual Operations</h3>
+        <p>For businesses losing time to repetitive workflows, disconnected tools and avoidable admin work.</p>
+      </div>
+
+      <div class="audience-card">
+        <span>04</span>
+        <h3>Complex Business Systems</h3>
+        <p>For companies that need sales, communication, operations and data to work as one coordinated system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <section class="process">
   <div class="process-inner">
     <div class="process-label">HOW IT WORKS</div>
