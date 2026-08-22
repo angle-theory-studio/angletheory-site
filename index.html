@@ -237,6 +237,67 @@ h1 {
   color: #aaa69d;
   font-size: 20px;
   line-height: 1.6;
+}
+
+.solutions {
+  padding: 120px 8%;
+  border-top: 1px solid #242321;
+}
+
+.solutions-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions-label {
+  color: #d6b15e;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.solutions h2 {
+  max-width: 900px;
+  font-size: clamp(46px, 5vw, 78px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-bottom: 56px;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.solution-card {
+  border: 1px solid #2b2a27;
+  padding: 34px;
+  min-height: 230px;
+}.solution-card span {
+  color: #d6b15e;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.solution-card h3 {
+  margin-top: 28px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.solution-card p {
+  margin-top: 16px;
+  color: #aaa69d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.solution-card.flagship {
+  border-color: #d6b15e;
+  grid-column: span 2;
 }.solution-card span {
   color: #d6b15e;
   font-size: 11px;
