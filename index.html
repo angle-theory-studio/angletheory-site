@@ -484,7 +484,65 @@ h1 {
   color: #aaa69d;
   font-size: 17px;
   line-height: 1.6;
-}    
+}
+.outcomes {
+  padding: 120px 6%;
+  border-top: 1px solid #242321;
+}
+
+.outcomes-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.outcomes-label {
+  color: #d6b15e;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.outcomes h2 {
+  max-width: 950px;
+  font-size: clamp(48px, 5vw, 82px);
+  line-height: 1.03;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  margin-bottom: 56px;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.outcome-card {
+  border: 1px solid #3a3935;
+  padding: 28px;
+  min-height: 220px;
+}
+
+.outcome-card span {
+  color: #d6b15e;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.outcome-card h3 {
+  margin-top: 28px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.outcome-card p {
+  margin-top: 16px;
+  color: #aaa69d;
+  font-size: 17px;
+  line-height: 1.6;
+}
+    
     .final-cta {
   padding: 140px 8%;
   border-top: 1px solid #242321;
@@ -751,6 +809,40 @@ h1 {
     </div>
   </div>
 </section>
+<section class="outcomes">
+  <div class="outcomes-inner">
+    <div class="outcomes-label">BUSINESS OUTCOMES</div>
+
+    <h2>Less Friction. More Control. Better Business Performance.</h2>
+
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <span>01</span>
+        <h3>Less Manual Work</h3>
+        <p>Reduce repetitive tasks and move routine work into reliable automated workflows.</p>
+      </div>
+
+      <div class="outcome-card">
+        <span>02</span>
+        <h3>Faster Lead Response</h3>
+        <p>Respond, qualify and follow up faster so opportunities do not get lost in manual processes.</p>
+      </div>
+
+      <div class="outcome-card">
+        <span>03</span>
+        <h3>Better Process Visibility</h3>
+        <p>Create clearer operational flow across sales, communication, data and internal execution.</p>
+      </div>
+
+      <div class="outcome-card">
+        <span>04</span>
+        <h3>More Consistent Execution</h3>
+        <p>Standardize how important business processes run without depending on scattered manual steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
   
 <section class="process">
   <div class="process-inner">
