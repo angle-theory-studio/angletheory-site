@@ -237,6 +237,28 @@ h1 {
   color: #aaa69d;
   font-size: 20px;
   line-height: 1.6;
+}.solution-card span {
+  color: #d6b15e;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.solution-card h3 {
+  margin-top: 28px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.solution-card p {
+  margin-top: 16px;
+  color: #aaa69d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.solution-card.flagship {
+  border-color: #d6b15e;
+  grid-column: span 2;
 }
     footer {
       display: flex;
@@ -364,7 +386,39 @@ h1 {
     </p>
   </div>
 </section>
-  <footer>
+ <section class="solutions" id="solutions">
+  <div class="solutions-inner">
+    <div class="solutions-label">SOLUTIONS</div>
+
+    <h2>AI Systems Built Around Business Outcomes.</h2>
+
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <span>01</span>
+        <h3>Revenue Systems</h3>
+        <p>CRM Automation, AI Lead Management and Sales Automation.</p>
+      </div>
+
+      <div class="solution-card">
+        <span>02</span>
+        <h3>Communication Systems</h3>
+        <p>AI Email, WhatsApp Automation and AI Customer Support.</p>
+      </div>
+
+      <div class="solution-card">
+        <span>03</span>
+        <h3>Operations Systems</h3>
+        <p>Document & Data Automation and AI Business Workflows.</p>
+      </div>
+
+      <div class="solution-card flagship">
+        <span>FLAGSHIP</span>
+        <h3>Autonomous Business System</h3>
+        <p>Multiple business functions coordinated inside one controlled AI operating architecture.</p>
+      </div>
+    </div>
+  </div>
+</section> <footer>
     <span>STRATIVON</span>
     <span>AI Business Systems Studio</span>
   </footer>
