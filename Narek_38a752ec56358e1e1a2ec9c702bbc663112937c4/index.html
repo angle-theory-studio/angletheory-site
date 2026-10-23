@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Business Systems</title>
+
+    <meta
+      name="description"
+      content="AI Business Systems designs and builds AI business systems for sales, communication and operations — combining automation, intelligence and integrations."
+    />
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link
+      rel="/assets/icons/apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="AI Business Systems" />
+    <meta
+      property="og:description"
+      content="AI Business Systems designs and builds AI business systems for sales, communication and operations — combining automation, intelligence and integrations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://angletheory.studio/" />
+    <meta
+      property="og:image"
+      content="https://angletheory.studio/assets/icons/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AI Business Systems" />
+    <link rel="canonical" href="https://angletheory.studio/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+    />
+
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/components.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <style>
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ---------- header ---------- */
+      header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 6%;
+        border-bottom: 1px solid var(--line);
+        background: var(--bg);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        flex: none;
+        display: block;
+      }
+
+      .brand-name {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      .nav-link {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 12px 22px;
+        border: 1px solid var(--line-strong);
+        border-radius: 4px;
+        white-space: nowrap;
+        transition:
+          color 0.2s ease,
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+        box-shadow: 0 0 18px rgba(61, 220, 90, 0.25);
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        flex: 1;
+        min-height: calc(100vh - 70px);
+        display: flex;
+        align-items: center;
+        padding: 64px 6% 72px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            55% 60% at 78% 48%,
+            rgba(61, 220, 90, 0.1),
+            transparent 70%
+          ),
+          radial-gradient(
+            40% 45% at 0% 0%,
+            rgba(61, 220, 90, 0.08),
+            transparent 70%
+          ),
+          linear-gradient(180deg, var(--bg-2), var(--bg));
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px);
+        background-size: 72px 72px;
+        opacity: 0.5;
+        -webkit-mask-image: radial-gradient(
+          70% 70% at 75% 50%,
+          #000,
+          transparent 75%
+        );
+        mask-image: radial-gradient(70% 70% at 75% 50%, #000, transparent 75%);
+        pointer-events: none;
+      }
+
+      .hero-content {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        gap: 48px 56px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 22px;
+        text-wrap: balance;
+      }
+
+      .eyebrow::before {
+        content: "";
+        flex: none;
+        width: 36px;
+        height: 2px;
+        background: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+      }
+
+      h1 {
+        max-width: 760px;
+        font-size: clamp(32px, 3.8vw, 54px);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+        text-wrap: balance;
+      }
+
+      h1 span {
+        color: var(--accent);
+      }
+
+      .hero-text {
+        max-width: 600px;
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: clamp(16px, 1.5vw, 18px);
+        line-height: 1.7;
+        text-wrap: pretty;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 40px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        padding: 0 34px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 4px;
+        transition: 0.2s ease;
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: var(--on-accent);
+        border: 1px solid var(--accent);
+        box-shadow: 0 0 20px rgba(61, 220, 90, 0.16);
+      }
+
+      .button-primary:hover {
+        background: var(--accent-hover);
+        border-color: var(--accent-hover);
+        box-shadow: 0 0 26px rgba(61, 220, 90, 0.26);
+      }
+
+      .button-secondary {
+        color: var(--text);
+        border: 1px solid var(--line-strong);
+      }
+
+      .button-secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .principles {
+        grid-column: 1 / -1;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 32px;
+        color: var(--faint);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      .principles span::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 8px var(--accent);
+        vertical-align: 1px;
+      }
+
+      .hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-logo {
+        width: 100%;
+        height: auto;
+        max-width: 375px;
+        display: block;
+        filter: drop-shadow(0 0 36px rgba(61, 220, 90, 0.12));
+      }
+
+      /* ---------- общие стили секций ---------- */
+      .section {
+        padding: 120px 6%;
+        border-top: 1px solid var(--line);
+        position: relative;
+      }
+
+      .section.alt {
+        background: linear-gradient(180deg, var(--bg-2), var(--bg));
+      }
+
+      .inner {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .label {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      .label::before {
+        content: "";
+        flex: none;
+        width: 28px;
+        height: 2px;
+        background: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+      }
+
+      h2 {
+        max-width: 940px;
+        font-size: clamp(28px, 3.2vw, 46px);
+        line-height: 1.12;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+
+      .section h2 + .grid,
+      .section h2 + .flow {
+        margin-top: 56px;
+      }
+
+      .lead {
+        max-width: 720px;
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: clamp(16px, 1.5vw, 19px);
+        line-height: 1.7;
+      }
+
+      /* ---------- карточки ---------- */
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 220px;
+        padding: 32px;
+        background: var(--card-bg);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .card:hover {
+        border-color: var(--line-strong);
+        box-shadow: 0 0 36px rgba(61, 220, 90, 0.12);
+        transform: translateY(-2px);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card:hover {
+          transform: none;
+        }
+      }
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .num {
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+      }
+
+      .icon {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border: 1px solid var(--line-strong);
+        border-radius: 12px;
+        color: var(--accent);
+        background: rgba(61, 220, 90, 0.07);
+        box-shadow: 0 0 22px rgba(61, 220, 90, 0.12);
+      }
+
+      .icon svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      .card h3 {
+        margin-top: 28px;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 1.25;
+        text-wrap: balance;
+      }
+
+      .card p {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .card.flagship {
+        grid-column: 1 / -1;
+        min-height: 0;
+        border-color: var(--line-strong);
+        background:
+          radial-gradient(
+            60% 120% at 100% 50%,
+            rgba(61, 220, 90, 0.16),
+            transparent 70%
+          ),
+          var(--card-bg);
+      }
+
+      .card.flagship p {
+        max-width: 760px;
+      }
+
+      /* ---------- Flagship System ---------- */
+      .flow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .flow span {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 20px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        background: rgba(61, 220, 90, 0.06);
+      }
+
+      .flow span::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+      }
+
+      /* ---------- How It Works ---------- */
+      .step {
+        padding-top: 22px;
+        border-top: 2px solid var(--line-strong);
+        position: relative;
+      }
+
+      .step::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 44px;
+        height: 2px;
+        background: var(--accent);
+        box-shadow: 0 0 12px var(--accent);
+      }
+
+      .step h3 {
+        margin-top: 24px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .step p {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      /* ---------- Start a Project ---------- */
+      .final-cta {
+        padding: 120px 6%;
+        border-top: 1px solid var(--line);
+        background:
+          radial-gradient(
+            50% 80% at 50% 100%,
+            rgba(61, 220, 90, 0.16),
+            transparent 70%
+          ),
+          var(--bg);
+      }
+
+      .final-cta .lead {
+        max-width: 680px;
+      }
+
+      .final-cta .button {
+        margin-top: 40px;
+      }
+
+      /* ---------- footer ---------- */
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px 28px;
+        padding: 26px 6%;
+        border-top: 1px solid var(--line);
+        color: var(--faint);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+      }
+
+      footer span:first-child {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      footer a {
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      footer a:hover {
+        color: var(--accent);
+      }
+
+      /* ---------- планшет ---------- */
+      @media (max-width: 1024px) {
+        .grid-3,
+        .grid-4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .section,
+        .final-cta {
+          padding-top: 96px;
+          padding-bottom: 96px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          min-height: 0;
+          padding: 64px 6% 72px;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          gap: 56px;
+        }
+
+        .hero-logo {
+          max-width: 300px;
+        }
+      }
+
+      /* ---------- телефон ---------- */
+      @media (max-width: 640px) {
+        .grid-2,
+        .grid-3,
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          min-height: 0;
+          padding: 26px;
+        }
+
+        .section,
+        .final-cta {
+          padding: 72px 22px;
+        }
+
+        .section h2 + .grid,
+        .section h2 + .flow {
+          margin-top: 40px;
+        }
+
+        .step {
+          padding-bottom: 12px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .nav-link {
+          white-space: normal;
+          text-align: center;
+          line-height: 1.25;
+          max-width: 92px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header {
+          padding: 12px 18px;
+          gap: 8px;
+        }
+
+        .brand-mark {
+          width: 32px;
+          height: 32px;
+        }
+
+        .brand {
+          gap: 8px;
+          min-width: 0;
+        }
+
+        .brand-name {
+          font-size: 14px;
+        }
+
+        .nav-link {
+          font-size: 11px;
+          letter-spacing: 0.04em;
+          padding: 9px 12px;
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .hero {
+          padding: 40px 22px 56px;
+          align-items: flex-start;
+        }
+
+        h1 {
+          font-size: clamp(28px, 8.4vw, 36px);
+        }
+
+        .hero-text {
+          font-size: 17px;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .principles {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .flow span {
+          padding: 12px 16px;
+          font-size: 11px;
+        }
+
+        footer {
+          padding: 22px;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="brand" href="#" aria-label="AI Business Systems">
+          <img
+            class="brand-mark"
+            src="/assets/images/header-symbol.png"
+            alt=""
+            width="40"
+            height="40"
+          />
+          <span class="brand-name">AI Business Systems</span>
+        </a>
+
+        <a class="nav-link" href="#start">Start a Project</a>
+      </header>
+
+      <main class="hero">
+        <div class="hero-content">
+          <div class="hero-copy">
+            <div class="eyebrow">Smarter Systems, Bigger Opportunities</div>
+
+            <h1>AI Systems Built to <span>Move Business Forward.</span></h1>
+
+            <p class="hero-text">
+              We design and build intelligent systems that connect sales,
+              communication and operations — powered by AI, automation and
+              integrations.
+            </p>
+
+            <div class="actions">
+              <a class="button button-primary" href="#start">
+                Start a Project
+              </a>
+
+              <a class="button button-secondary" href="#solutions">
+                Explore Solutions
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img
+              class="hero-logo"
+              src="/assets/images/hero-emblem.webp"
+              alt="AI Business Systems"
+              width="487"
+              height="487"
+              sizes="(max-width: 600px) 90vw, 487px"
+              fetchpriority="high"
+            />
+          </div>
+
+          <div class="principles">
+            <span>Strategy</span>
+            <span>Automation</span>
+            <span>Intelligence</span>
+            <span>Growth</span>
+            <span>Results</span>
+          </div>
+        </div>
+      </main>
+
+      <section class="section" id="products">
+        <div class="inner">
+          <div class="products-grid">
+            <!-- 01. Sales Manager -->
+            <article class="product-card">
+              <div class="card-top">
+                <div class="product-card__visual" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="9" cy="8" r="3.5"></circle>
+                    <path d="M3 20v-1.5a6 6 0 0 1 12 0V20"></path>
+                    <path d="M16 5.5a3.5 3.5 0 0 1 0 6.8"></path>
+                    <path d="M18 14a5 5 0 0 1 3 4.5V20"></path>
+                  </svg>
+                </div>
+
+                <span class="product-card__number">01</span>
+              </div>
+
+              <h3 class="product-card__title">SALES MANAGER</h3>
+
+              <p class="product-card__tagline">
+                TURN CUSTOMER PROSPECTING INTO A SYSTEMATIC PROCESS
+              </p>
+
+              <div class="product-card__footer">
+                <a class="product-card__link" href="/products/sales-manager/">
+                  Learn More
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- 02. AI Agent Master -->
+            <article class="product-card">
+              <div class="card-top">
+                <div class="product-card__visual" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="5" y="5" width="14" height="14" rx="3"></rect>
+                    <path d="M9 2v3m6-3v3M9 19v3m6-3v3"></path>
+                    <path d="M2 9h3m-3 6h3m14-6h3m-3 6h3"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <span class="product-card__number">02</span>
+              </div>
+
+              <h3 class="product-card__title">AI AGENT 1.0 MASTER</h3>
+
+              <p class="product-card__tagline">
+                YOU SET THE GOAL — THE SYSTEM COORDINATES YOUR AI AGENTS
+              </p>
+
+              <div class="product-card__footer">
+                <a class="product-card__link" href="/products/ai-agent-master/">
+                  Learn More
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- 03. Business App -->
+            <article class="product-card">
+              <div class="card-top">
+                <div class="product-card__visual" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="6" y="2" width="12" height="20" rx="2.5"></rect>
+                    <path d="M10 5h4M10 18h4"></path>
+                    <path d="m9 11 2 2 4-4"></path>
+                  </svg>
+                </div>
+
+                <span class="product-card__number">03</span>
+              </div>
+
+              <h3 class="product-card__title">AN APP FOR YOUR BUSINESS</h3>
+
+              <p class="product-card__tagline">
+                CRM, your team and workflows — on your phone.
+              </p>
+
+              <div class="product-card__footer">
+                <a class="product-card__link" href="/products/business-app/">
+                  Learn More
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- 04. Autonomous Business System -->
+            <article class="product-card">
+              <div class="card-top">
+                <div class="product-card__visual" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="8" y="2" width="8" height="6" rx="1.5"></rect>
+                    <rect x="2" y="16" width="8" height="6" rx="1.5"></rect>
+                    <rect x="14" y="16" width="8" height="6" rx="1.5"></rect>
+                    <path d="M12 8v4M6 16v-4h12v4"></path>
+                  </svg>
+                </div>
+
+                <span class="product-card__number">04</span>
+              </div>
+
+              <h3 class="product-card__title">AUTONOMOUS BUSINESS SYSTEM</h3>
+
+              <p class="product-card__tagline">
+                FOUR DEPARTMENTS — ONE COORDINATED SYSTEM
+              </p>
+
+              <div class="product-card__footer">
+                <a
+                  class="product-card__link"
+                  href="/products/autonomous-business-system/"
+                >
+                  Learn More
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section additional-services" id="additional-services">
+        <div class="inner">
+          <h2>Additional Services</h2>
+          <div class="additional-services__grid">
+            <a
+              class="service-tile"
+              href="/services/ai-search-visibility-audit/"
+            >
+              <span class="service-tile__number">01</span>
+              <h3 class="service-tile__title">AI Search Visibility Audit</h3>
+              <p class="service-tile__description">
+                Understand Your Business Visibility in AI Search
+              </p>
+            </a>
+
+            <a
+              class="service-tile"
+              href="/services/ai-competitor-intelligence/"
+            >
+              <span class="service-tile__number">02</span>
+              <h3 class="service-tile__title">AI Competitor Intelligence</h3>
+              <p class="service-tile__description">
+                Analyse Competitors and Their Visibility in AI Search
+              </p>
+            </a>
+
+            <a class="service-tile" href="/services/ai-opportunity-audit/">
+              <span class="service-tile__number">03</span>
+              <h3 class="service-tile__title">AI Opportunity Audit</h3>
+              <p class="service-tile__description">
+                Find Opportunities for AI and Automation
+              </p>
+            </a>
+            <a class="service-tile" href="/services/seo-revenue-recovery/">
+              <span class="service-tile__number">04</span>
+              <h3 class="service-tile__title">SEO Revenue Recovery</h3>
+              <p class="service-tile__description">
+                Find Missed Opportunities for Organic Growth
+              </p>
+            </a>
+
+            <a
+              class="service-tile"
+              href="/services/premium-account-opportunity/"
+            >
+              <span class="service-tile__number">05</span>
+              <h3 class="service-tile__title">Premium Account Opportunity</h3>
+              <p class="service-tile__description">
+                Identify and Assess High-Value Prospects
+              </p>
+            </a>
+            <a
+              class="service-tile"
+              href="/services/seo-internal-linking-authority/"
+            >
+              <span class="service-tile__number">06</span>
+              <h3 class="service-tile__title">
+                SEO Internal Linking & Authority Architecture
+              </h3>
+              <p class="service-tile__description">
+                Build a stronger website structure that helps authority flow to
+                the pages that matter most.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="label">THE PROBLEM</div>
+
+          <h2>Your Business Has the Tools. It Needs the System.</h2>
+
+          <p class="lead">
+            CRM, email, WhatsApp, documents, sales and operations often work as
+            separate pieces. AI BUSINESS SYSTEMS connects them into one
+            intelligent, controlled workflow.
+          </p>
+        </div>
+      </section>
+
+      <section class="section alt" id="solutions">
+        <div class="inner">
+          <div class="label">SOLUTIONS</div>
+
+          <h2>AI Systems Built Around Business Outcomes.</h2>
+
+          <div class="grid grid-3">
+            <div class="card">
+              <div class="card-top">
+                <span class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 20v-5M11 20v-9M17 20v-6" />
+                    <path d="M3 8l6-4 4 3 7-5" />
+                    <path d="M16 2h4v4" />
+                  </svg>
+                </span>
+                <span class="num">01</span>
+              </div>
+              <h3>AI Sales Systems</h3>
+              <p>
+                Lead capture, qualification, follow-up and sales workflows
+                designed around your pipeline.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.2-4.4A8 8 0 1 1 21 12z"
+                    />
+                    <path
+                      d="M8.5 12h.01M12 12h.01M15.5 12h.01"
+                      stroke-width="2.4"
+                    />
+                  </svg>
+                </span>
+                <span class="num">02</span>
+              </div>
+              <h3>Customer Communication</h3>
+              <p>
+                AI-powered communication systems for inquiries, routing,
+                follow-ups and repetitive conversations.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14" />
+                  </svg>
+                </span>
+                <span class="num">03</span>
+              </div>
+              <h3>Operations Automation</h3>
+              <p>
+                Connected workflows that reduce repetitive work across teams,
+                tools and business processes.
+              </p>
+            </div>
+
+            <div class="card flagship">
+              <div class="card-top">
+                <span class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="2.6" />
+                    <circle cx="5" cy="5.5" r="1.8" />
+                    <circle cx="19" cy="5.5" r="1.8" />
+                    <circle cx="5" cy="18.5" r="1.8" />
+                    <circle cx="19" cy="18.5" r="1.8" />
+                    <path
+                      d="M10.2 10.2L6.3 6.8M13.8 10.2l3.9-3.4M10.2 13.8l-3.9 3.4M13.8 13.8l3.9 3.4"
+                    />
+                  </svg>
+                </span>
+                <span class="num">FLAGSHIP</span>
+              </div>
+              <h3>Autonomous Business System</h3>
+              <p>
+                Multiple business functions coordinated inside one controlled AI
+                operating system — connecting sales, communication, operations
+                and intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="label">FLAGSHIP SYSTEM</div>
+
+          <h2>Autonomous Business System</h2>
+
+          <p class="lead">
+            One controlled AI architecture coordinating sales, communication,
+            operations, data and decision logic across the business.
+          </p>
+
+          <div class="flow" style="margin-top: 48px">
+            <span>Strategy</span>
+            <span>Intelligence</span>
+            <span>Execution</span>
+            <span>Connectivity</span>
+            <span>Control</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="inner">
+          <div class="label">WHO IT’S FOR</div>
+
+          <h2>Built for Businesses Ready to Operate Smarter.</h2>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <span class="num">01</span>
+              <h3>Growing Sales Teams</h3>
+              <p>
+                For businesses handling more leads than their current process
+                can manage efficiently.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">02</span>
+              <h3>High-Volume Communication</h3>
+              <p>
+                For teams dealing with repeated inquiries, follow-ups and
+                customer conversations across channels.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">03</span>
+              <h3>Manual Operations</h3>
+              <p>
+                For businesses losing time to repetitive workflows, disconnected
+                tools and avoidable admin work.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">04</span>
+              <h3>Complex Business Systems</h3>
+              <p>
+                For companies that need sales, communication, operations and
+                data to work as one coordinated system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="label">BUSINESS OUTCOMES</div>
+
+          <h2>Less Friction. More Control. Better Business Performance.</h2>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <span class="num">01</span>
+              <h3>Less Manual Work</h3>
+              <p>
+                Reduce repetitive tasks and move routine work into reliable
+                automated workflows.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">02</span>
+              <h3>Faster Lead Response</h3>
+              <p>
+                Respond, qualify and follow up faster so opportunities do not
+                get lost in manual processes.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">03</span>
+              <h3>Better Process Visibility</h3>
+              <p>
+                Create clearer operational flow across sales, communication,
+                data and internal execution.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">04</span>
+              <h3>More Consistent Execution</h3>
+              <p>
+                Standardize how important business processes run without
+                depending on scattered manual steps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="inner">
+          <div class="label">HOW IT WORKS</div>
+
+          <h2>From Business Problem to Working AI System.</h2>
+
+          <div class="grid grid-4">
+            <div class="step">
+              <span class="num">01</span>
+              <h3>Diagnose</h3>
+              <p>
+                We identify the bottlenecks, repetitive work and high-value
+                automation opportunities.
+              </p>
+            </div>
+
+            <div class="step">
+              <span class="num">02</span>
+              <h3>Design</h3>
+              <p>
+                We architect the AI workflows, integrations and control logic
+                around your business.
+              </p>
+            </div>
+
+            <div class="step">
+              <span class="num">03</span>
+              <h3>Build</h3>
+              <p>
+                We implement, connect and test the system inside your operating
+                environment.
+              </p>
+            </div>
+
+            <div class="step">
+              <span class="num">04</span>
+              <h3>Optimize</h3>
+              <p>
+                We refine performance, reliability and business outcomes as the
+                system runs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="label">WHY AI BUSINESS SYSTEMS</div>
+
+          <h2>Built Around Your Business. Not Around a Template.</h2>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <span class="num">01</span>
+              <h3>Systems-First Approach</h3>
+              <p>
+                We design the complete business workflow before choosing the
+                automation and AI behind it.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">02</span>
+              <h3>Built Around Existing Tools</h3>
+              <p>
+                We connect with the tools and workflows your business already
+                uses instead of forcing unnecessary replacement.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">03</span>
+              <h3>Tailored Architecture</h3>
+              <p>
+                Each system is designed around your processes, constraints and
+                business objectives.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="num">04</span>
+              <h3>Outcome Focused</h3>
+              <p>
+                Technology is selected for the business result it enables — not
+                simply because it is AI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="start">
+        <div class="inner">
+          <div class="label">START A PROJECT</div>
+
+          <h2>Build the System Your Business Actually Needs.</h2>
+
+          <p class="lead">
+            Tell us what is slowing your business down. We’ll map the right AI
+            system around your goals, workflows and existing tools.
+          </p>
+
+          <a class="button button-primary" href="https://wa.me/66984407304">
+            Start a Project
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <span>AI BUSINESS SYSTEMS</span>
+        <span>AI Business Systems Studio</span>
+        <a href="mailto:b2b.volodymyr.thai@gmail.com"
+          >Email AI Business Systems</a
+        >
+        <a href="tel:+4550276439">Denmark +45 50 27 64 39</a>
+        <a href="https://wa.me/66984407304">WhatsApp +66 98 440 7304</a>
+      </footer>
+    </div>
+  </body>
+</html>

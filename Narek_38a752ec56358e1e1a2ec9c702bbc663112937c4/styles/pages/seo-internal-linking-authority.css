@@ -1,0 +1,416 @@
+/* =========================================
+   SEO INTERNAL LINKING & AUTHORITY PAGE
+   ========================================= */
+
+.internal-linking {
+  position: relative;
+  overflow: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(
+      ellipse at 78% 8%,
+      rgba(61, 220, 90, 0.08),
+      transparent 34rem
+    ),
+    var(--bg);
+}
+
+.internal-linking *,
+.internal-linking *::before,
+.internal-linking *::after {
+  box-sizing: border-box;
+}
+
+.internal-linking__container {
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
+  margin-inline: auto;
+}
+
+/* =========================================
+   Hero
+   ========================================= */
+
+.internal-linking__hero {
+  position: relative;
+  padding-block: clamp(3.5rem, 8vw, 7.5rem);
+}
+
+.internal-linking__hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.internal-linking__hero-copy {
+  min-width: 0;
+}
+
+.internal-linking__hero h1 {
+  max-width: 600px;
+  margin: 0;
+  font-size: clamp(2.25rem, 4vw, var(--text-5xl));
+  font-weight: var(--font-bold);
+  letter-spacing: -0.055em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.internal-linking__lead {
+  max-width: 590px;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  line-height: var(--leading-relaxed);
+}
+
+.internal-linking__description {
+  max-width: 600px;
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+/* Shared contact button remains in components.css */
+
+.internal-linking__hero-copy .contact-button {
+  margin-top: 2rem;
+}
+
+/* =========================================
+   Decorative Architecture Diagram
+   ========================================= */
+
+.internal-linking__visual {
+  min-width: 0;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      rgba(61, 220, 90, 0.09),
+      transparent 62%
+    ),
+    linear-gradient(150deg, rgba(15, 31, 20, 0.95), rgba(5, 10, 7, 0.96));
+  box-shadow: var(--shadow-lg);
+}
+
+.internal-linking__diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.internal-linking__connection {
+  stroke: rgba(61, 220, 90, 0.58);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 6;
+}
+
+.internal-linking__connection-point,
+.internal-linking__node-dot {
+  fill: var(--accent);
+}
+
+.internal-linking__main-node {
+  fill: rgba(61, 220, 90, 0.1);
+  stroke: rgba(61, 220, 90, 0.65);
+}
+
+.internal-linking__node-icon-bg {
+  fill: rgba(61, 220, 90, 0.1);
+  stroke: var(--line-strong);
+}
+
+.internal-linking__node-icon {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.internal-linking__node {
+  fill: rgba(8, 20, 13, 0.98);
+  stroke: var(--line-strong);
+}
+
+.internal-linking__small-node {
+  fill: rgba(5, 10, 7, 0.98);
+  stroke: var(--line);
+}
+
+.internal-linking__node-lines {
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.65;
+}
+
+/* =========================================
+   Approach
+   ========================================= */
+
+.internal-linking__approach {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(
+      ellipse at 12% 50%,
+      rgba(61, 220, 90, 0.055),
+      transparent 28rem
+    ),
+    var(--bg-2);
+}
+
+.internal-linking__approach::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 8%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--line), transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.internal-linking__approach-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: clamp(2rem, 7vw, 7rem);
+}
+
+.internal-linking__section-intro,
+.internal-linking__approach-copy {
+  min-width: 0;
+}
+
+.internal-linking__section-intro h2,
+.internal-linking__deliverables-heading h2 {
+  position: relative;
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(1.8rem, 3.5vw, var(--text-3xl));
+  font-weight: var(--font-semibold);
+  letter-spacing: -0.045em;
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+}
+
+.internal-linking__section-intro h2::after,
+.internal-linking__deliverables-heading h2::after {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 1.25rem;
+  background: var(--accent);
+  content: "";
+}
+
+.internal-linking__approach-copy > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+/* =========================================
+   What You Receive
+   ========================================= */
+
+.internal-linking__deliverables {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.internal-linking__deliverables-heading {
+  margin-bottom: 1.75rem;
+}
+
+.internal-linking__report {
+  max-width: 850px;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  background: linear-gradient(90deg, rgba(61, 220, 90, 0.045), transparent 85%);
+}
+
+.internal-linking__report p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+/* =========================================
+   Final CTA
+   ========================================= */
+
+.internal-linking__cta {
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(
+      ellipse at 80% 50%,
+      rgba(61, 220, 90, 0.08),
+      transparent 32rem
+    ),
+    var(--bg-2);
+}
+
+.internal-linking__cta-inner {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.internal-linking__cta .contact-button {
+  margin-top: 0;
+}
+
+/* Arrow icon used inside the shared contact button */
+
+.internal-linking .contact-button__arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media (max-width: 64rem) {
+  .internal-linking__hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .internal-linking__hero-copy {
+    max-width: 780px;
+  }
+
+  .internal-linking__visual {
+    display: none;
+  }
+
+  .internal-linking__approach-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 48rem) {
+  .internal-linking__container {
+    width: min(calc(100% - 2rem), var(--container-width));
+  }
+
+  .internal-linking__hero {
+    padding-block: 3rem 2rem;
+  }
+
+  .internal-linking__hero h1 {
+    font-size: clamp(1.5rem, 9vw, 3.2rem);
+  }
+
+  .internal-linking__lead {
+    margin-top: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .internal-linking__description {
+    font-size: var(--text-sm);
+    line-height: 1.75;
+  }
+
+  .internal-linking__hero-copy .contact-button {
+    margin-top: 1.5rem;
+  }
+
+  .internal-linking__approach {
+    padding-block: 2rem;
+  }
+
+  .internal-linking__approach-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem;
+  }
+
+  .internal-linking__approach::after {
+    display: none;
+  }
+
+  .internal-linking__section-intro h2,
+  .internal-linking__deliverables-heading h2 {
+    font-size: clamp(1.6rem, 7vw, 2.25rem);
+  }
+
+  .internal-linking__deliverables {
+    padding-block: 2rem;
+  }
+
+  .internal-linking__deliverables-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .internal-linking__report {
+    padding: 1.25rem 0 1.25rem 1rem;
+  }
+
+  .internal-linking__report p {
+    font-size: var(--text-sm);
+  }
+
+  .internal-linking__cta-inner {
+    width: min(calc(100% - 2rem), var(--container-width));
+  }
+
+  .internal-linking__cta .contact-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   Small Mobile
+   ========================================= */
+
+@media (max-width: 24.375rem) {
+  .internal-linking__container {
+    width: calc(100% - 2rem);
+  }
+
+  .internal-linking__diagram {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   Reduced Motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .internal-linking *,
+  .internal-linking *::before,
+  .internal-linking *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
