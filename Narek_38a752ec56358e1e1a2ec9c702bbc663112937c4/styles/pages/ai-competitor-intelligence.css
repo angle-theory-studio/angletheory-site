@@ -1,0 +1,242 @@
+/* AI Competitor Intelligence — page-specific styles
+   The contact-button component is provided by component.css.
+   Competitor card classes are namespaced to avoid product-card collisions.
+*/
+
+.competitor-page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: clamp(3.5rem, 8vw, 7rem) var(--page-gutter);
+  background:
+    radial-gradient(
+      ellipse at 78% 45%,
+      rgba(61, 220, 90, 0.075),
+      transparent 34rem
+    ),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+
+.competitor-hero {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 7rem);
+}
+
+.competitor-hero__content {
+  max-width: 700px;
+}
+
+.competitor-hero__title {
+  max-width: 550px;
+  color: var(--text);
+  font-size: clamp(2.6rem, 5.1vw, var(--text-5xl));
+  font-weight: var(--font-semibold);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.competitor-hero__description {
+  max-width: 660px;
+  margin-top: var(--space-8);
+  color: var(--muted);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+}
+
+/* Page-specific report card: intentionally does not use .product-card classes. */
+.competitor-report-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 410px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.competitor-report-card::before {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  left: 22px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--line-strong),
+    transparent
+  );
+}
+
+.competitor-report-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+
+.competitor-report-card__topline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.competitor-report-card__number {
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.1em;
+}
+
+.competitor-report-card__rule {
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+.competitor-report-card__visual {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  margin-top: clamp(2.25rem, 4.5vw, 3.5rem);
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+}
+
+.competitor-report-card__visual svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.competitor-report-card__title {
+  margin-top: 26px;
+  color: var(--text);
+  font-size: clamp(1.2rem, 2vw, var(--text-xl));
+  font-weight: var(--font-semibold);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.competitor-report-card__description {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.competitor-report-card__footer {
+  display: flex;
+  align-items: end;
+  gap: 7px;
+  height: 38px;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.competitor-report-card__footer span {
+  flex: 1;
+  height: 35%;
+  background: var(--line-strong);
+  border-radius: 2px 2px 0 0;
+}
+
+.competitor-report-card__footer span:nth-child(3n) {
+  height: 65%;
+}
+.competitor-report-card__footer span:nth-child(4n) {
+  height: 48%;
+}
+.competitor-report-card__footer span:nth-child(5n) {
+  height: 90%;
+  background: rgba(61, 220, 90, 0.55);
+}
+.competitor-report-card__footer span:nth-child(7n) {
+  height: 72%;
+}
+.competitor-report-card__footer span:nth-child(11n) {
+  height: 100%;
+  background: var(--accent);
+}
+
+@media (max-width: 64rem) {
+  .competitor-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(270px, 0.8fr);
+    gap: 2.5rem;
+  }
+
+  .competitor-hero__title {
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+  }
+
+  .competitor-report-card {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .competitor-page {
+    align-items: flex-start;
+    padding-block: 2rem;
+  }
+
+  .competitor-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .competitor-hero__title {
+    font-size: clamp(2rem, 9vw, 3.6rem);
+  }
+
+  .competitor-hero__description {
+    margin-top: 1rem;
+    font-size: var(--text-base);
+  }
+
+  .competitor-report-card {
+    min-height: 350px;
+  }
+
+  .competitor-report-card__visual {
+    margin-top: 2.25rem;
+  }
+}
+
+@media (max-width: 24.375rem) {
+  .competitor-page {
+    padding-inline: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .competitor-report-card {
+    transition: none;
+  }
+
+  .competitor-report-card:hover {
+    transform: none;
+  }
+}

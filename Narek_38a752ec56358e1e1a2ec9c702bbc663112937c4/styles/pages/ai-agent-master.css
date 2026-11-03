@@ -1,0 +1,111 @@
+/* AI Agent 1.0 Master product page */
+
+.ai-agent-master {
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 85% 10%, var(--accent-soft), transparent 42%),
+    linear-gradient(160deg, var(--bg), var(--bg-2));
+  font-family: var(--font);
+}
+
+.ai-agent-master__hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(80px, 10vw, 144px) 24px;
+}
+
+.ai-agent-master__container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.ai-agent-master__content {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.ai-agent-master__eyebrow {
+  margin: 0 0 24px;
+  color: var(--accent);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ai-agent-master__title {
+  max-width: 800px;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(var(--text-3xl), 5.8vw, 4rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.ai-agent-master__description {
+  max-width: 780px;
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.ai-agent-master__description p {
+  margin: 0 0 20px;
+}
+
+.ai-agent-master__description p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-agent-master__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+@media (max-width: 768px) {
+  .ai-agent-master__hero {
+    padding: 30px 24px;
+  }
+
+  .ai-agent-master__eyebrow {
+    margin-bottom: 20px;
+    font-size: var(--text-xs);
+  }
+
+  .ai-agent-master__title {
+    font-size: clamp(1.2rem, 6.5vw, var(--text-4xl));
+    line-height: var(--leading-tight);
+    letter-spacing: -0.035em;
+  }
+
+  .ai-agent-master__description {
+    margin-top: 24px;
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+  }
+
+  .ai-agent-master__description p {
+    margin-bottom: 18px;
+  }
+
+  .ai-agent-master__actions {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-agent-master__hero {
+    padding: 20px;
+  }
+}
